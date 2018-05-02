@@ -67,10 +67,11 @@ class GraphComponent(DashboardComponent):
 	"""
 
 	def make_component(self, data, **kwargs):
+		self.table = TableComponent(data)
 		self.graph1 = DashboardComponent(data)
 		self.graph2 = DashboardComponent(data)
-		self.table = TableComponent(data)
-		return row(self.table.root, self.graph1.root, self.graph2.root)
+		return column(self.table.root, 
+				row(self.graph1.root, self.graph2.root))
 		
 	def update_component(self, change):
 		"""update components"""
@@ -97,7 +98,7 @@ class TabComponent(DashboardComponent):
 		self.gc = GraphComponent(data)
 		
 		l = row(self.ic.root, self.gc.root)
-		p = Panel(child=l, title="Glucose")
+		p = Panel(child=l, title="Booklevel")
 		return p
 
 	def update_component(self, change):

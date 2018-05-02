@@ -1,3 +1,7 @@
+
+import logging
+logger = logging.getLogger()
+
 import pandas as pd
 import numpy as np
 from datetime import datetime
@@ -14,8 +18,7 @@ from bokeh.application import Application
 
 from traitlets import HasTraits, observe, Dict
 
-import logging
-logger = logging.getLogger()
+
 
 
 class DashboardComponent(HasTraits):

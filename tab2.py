@@ -31,5 +31,5 @@ class OverviewComponent(DashboardComponent):
 
 def tab(df):		
 	oc = OverviewComponent(df)	
-	return Panel(child = oc.root, title = "ISIG")
+	return Panel(child = oc.root, title = "Tickets")
 

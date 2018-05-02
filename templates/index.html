@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.6.min.css" type="text/css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+ {{ bokeh_css }}
+
+        <style type="text/css">
+            @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+            body {
+              font-family: 'Noto Sans', sans-serif;
+              -webkit-font-smoothing: antialiased;
+              text-rendering: optimizeLegibility;
+              color: #fff;
+              background: #2F2F2F;
+             }
+             
+			.bk-widget-form-input{
+							color:#611212; 
+							background-color: #791c1c;
+			 }
+						 
+			.bk-widget {
+				margin-top: 5px;
+			 }
+			 
+			 .bk-data-table{
+				 color:#611212;
+				 }
+			  
+			.navbar {
+			color: #fff;
+			background: #2F2F2F;
+			}
+			
+			select {
+					color:#611212; 
+					background-color: #791c1c;
+				}
+     }
+        </style>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  {{ bokeh_js }} 
+  
+        <meta charset="utf-8">
+        <title>Portia Natrium PLA</title>
+    </head>
+    <body>
+
+<div class="container-fluid">
+	
+  <nav class="navbar navbar-default nav-menu">
+    <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".button-menu">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="#">Portia Natrium PLA</a>
+	</div>
+	
+	<div class="collapse navbar-collapse button-menu">
+		<!--
+		<ul class="nav navbar-nav ">
+            <li><a href="#"><i class="fa fa-home"></i> HOME</a></li>
+            <li><a href="#">BILLER</a></li>
+            <li><a href="#">USERS</a></li>
+		</ul>
+        -->
+        <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicon-user"></span> 
+                        <strong>Thomas</strong>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <div class="navbar-login">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <p class="text-center">
+                                            <span class="glyphicon glyphicon-user icon-size"></span>
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <p class="text-left"><strong>Thomas</strong></p>
+                                        <p class="text-left small">thomas.haederle@portiafrances.com</p>
+                                        <p class="text-left">
+                                            <a href="#" class="btn btn-primary btn-block btn-sm">Logout</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <div class="navbar-login navbar-login-session">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <p>
+                                        	<a href="#" class="btn btn-primary btn-block">My Profile</a>
+                                            <a href="#" class="btn btn-danger btn-block">Change Password</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+             
+	</div>
+
+  </nav>
+</div>
+        {{ plot_div|indent(8) }}
+        {{ plot_script|indent(8) }}
+    </body>
+</html>
